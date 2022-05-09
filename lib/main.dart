@@ -21,8 +21,19 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('New app'),
       ),
-      body: Center(
-        child: Text('the new oen'),
+      body: Column(
+        children: <Widget>[
+          Card(
+            color: Colors.red,
+            child: Container(
+              width: 100,
+              child: Text('CHART!'),
+            ),
+          ),
+          Card(
+            child: Text('LIST OF TX'),
+          )
+        ],
       ),
     );
   }

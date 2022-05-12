@@ -23,14 +23,16 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Card(
-            color: Colors.red,
-            child: Container(
-              width: 100,
+          Container(
+            width: double.infinity,
+            child: Card(
+              color: Colors.red,
               child: Text('CHART!'),
+              elevation: 5,
             ),
           ),
           Card(
+            color: Colors.yellow,
             child: Text('LIST OF TX'),
           )
         ],

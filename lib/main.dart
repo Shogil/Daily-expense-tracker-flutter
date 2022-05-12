@@ -22,6 +22,8 @@ class MyHomePage extends StatelessWidget {
         title: Text('New app'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
           Container(
             width: double.infinity,

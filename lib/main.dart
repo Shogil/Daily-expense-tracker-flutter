@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('New app'),
+        title: Text('Resolve'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

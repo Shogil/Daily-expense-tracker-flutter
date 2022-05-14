@@ -19,13 +19,13 @@ class MyHomePage extends StatelessWidget {
   final List<Transaction> transaction = [
     Transaction(
       id: 't1',
-      title: 'room rent',
+      title: 'Room rent',
       amount: 30.01,
       date: DateTime.now(),
     ),
     Transaction(
       id: 't2',
-      title: 'weekly Groceries',
+      title: 'Weekly Groceries',
       amount: 16.53,
       date: DateTime.now(),
     )
@@ -66,7 +66,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       padding: EdgeInsets.all(10),
                       child: Text(
-                        tx.amount.toString(),
+                        '₹${tx.amount}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -75,9 +75,18 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ),
                     Column(children: <Widget>[
-                      Text(tx.title),
+                      Text(
+                        tx.title,
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       Text(
                         tx.date.toString(),
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
                       ),
                     ])
                   ],

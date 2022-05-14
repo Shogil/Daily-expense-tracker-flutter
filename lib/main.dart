@@ -20,7 +20,7 @@ class MyHomePage extends StatelessWidget {
     Transaction(
       id: 't1',
       title: 'room rent',
-      amount: 30,
+      amount: 30.01,
       date: DateTime.now(),
     ),
     Transaction(
@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Resolve'),
+        title: Text('Sort out'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -60,13 +60,18 @@ class MyHomePage extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.black,
+                          color: Colors.purple,
                           width: 2,
                         ),
                       ),
                       padding: EdgeInsets.all(10),
                       child: Text(
                         tx.amount.toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.purple,
+                        ),
                       ),
                     ),
                     Column(children: <Widget>[

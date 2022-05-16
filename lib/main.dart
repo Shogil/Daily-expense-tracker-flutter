@@ -55,8 +55,12 @@ class MyHomePage extends StatelessWidget {
               padding: EdgeInsets.all(10),
               child: Column(
                 children: <Widget>[
-                  TextField(),
-                  TextField(),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Amount'),
+                  ),
                 ],
               ),
             ),

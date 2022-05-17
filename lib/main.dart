@@ -1,3 +1,5 @@
+import 'package:daily_expense_tracker_flutter/widgets/user_transaction.dart';
+
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +41,7 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
+          UserTransactions(),
         ],
       ),
     );

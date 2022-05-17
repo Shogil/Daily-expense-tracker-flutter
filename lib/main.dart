@@ -1,4 +1,4 @@
-import 'transaction.dart';
+import 'models/transaction.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 
@@ -17,22 +17,11 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final List<Transaction> transaction = [
-    Transaction(
-      id: 't1',
-      title: 'Room rent',
-      amount: 30.01,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Weekly Groceries',
-      amount: 16.53,
-      date: DateTime.now(),
-    )
-  ];
-  String titleInput;
-  String amountInput;
+  final List<Transaction> transaction = [];
+  // String titleInput;
+  // String amountInput;
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,15 +49,17 @@ class MyHomePage extends StatelessWidget {
                 children: <Widget>[
                   TextField(
                     decoration: InputDecoration(labelText: 'Title'),
-                    onChanged: (val) {
-                      titleInput = val;
-                    },
+                    controller: titleController,
+                    // onChanged: (val) {
+                    //   titleInput = val;
+                    // },
                   ),
                   TextField(
                     decoration: InputDecoration(labelText: 'Amount'),
-                    onChanged: (val) {
-                      amountInput = val;
-                    },
+                    controller: amountController,
+                    // onChanged: (val) {
+                    //   amountInput = val;
+                    // },
                   ),
                   FlatButton(
                     onPressed: () {},

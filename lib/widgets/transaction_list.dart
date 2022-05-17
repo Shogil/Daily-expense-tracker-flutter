@@ -25,7 +25,7 @@ class _TransactionListState extends State<TransactionList> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: transaction.map((tx) {
+      children: _userTransaction.map((tx) {
         return Card(
           child: Row(
             children: <Widget>[

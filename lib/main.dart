@@ -1,3 +1,6 @@
+import 'package:daily_expense_tracker_flutter/widgets/new_transaction.dart';
+
+import './widgets/transaction_list.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,36 +40,8 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
-          Card(
-            elevation: 5,
-            child: Container(
-              padding: EdgeInsets.all(10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  TextField(
-                    decoration: InputDecoration(labelText: 'Title'),
-                    controller: titleController,
-                    // onChanged: (val) {
-                    //   titleInput = val;
-                    // },
-                  ),
-                  TextField(
-                    decoration: InputDecoration(labelText: 'Amount'),
-                    controller: amountController,
-                    // onChanged: (val) {
-                    //   amountInput = val;
-                    // },
-                  ),
-                  FlatButton(
-                    onPressed: () {},
-                    child: Text('Add Transaction'),
-                    textColor: Colors.purple,
-                  )
-                ],
-              ),
-            ),
-          ),
+          NewTransaction(),
+          TransactionList()
         ],
       ),
     );

@@ -3,6 +3,7 @@ import './transaction_list.dart';
 import 'package:flutter/material.dart';
 import '../models/transaction.dart';
 
+// ignore: use_key_in_widget_constructors
 class UserTransactions extends StatefulWidget {
   @override
   State<UserTransactions> createState() => _UserTransactionsState();

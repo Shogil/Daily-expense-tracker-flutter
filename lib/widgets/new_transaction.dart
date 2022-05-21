@@ -24,19 +24,20 @@ class NewTransaction extends StatelessWidget {
             TextField(
               decoration: InputDecoration(labelText: 'Amount'),
               controller: amountController,
+              keyboardType: TextInputType.number,
               // onChanged: (val) {
               //   amountInput = val;
               // },
             ),
             FlatButton(
+              child: Text('Add Transaction'),
+              textColor: Colors.purple,
               onPressed: () {
                 addTx(
                   titleController.text,
                   double.parse(amountController.text),
                 );
               },
-              child: Text('Add Transaction'),
-              textColor: Colors.purple,
             )
           ],
         ),

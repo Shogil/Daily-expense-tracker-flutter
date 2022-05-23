@@ -1,4 +1,3 @@
-import './widgets/user_transaction.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import 'package:flutter/material.dart';
@@ -53,11 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void startAddNewTransaction(BuildContext ctx) {
+  void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
         context: ctx,
         builder: (_) {
-          return NewTransaction();
+          return NewTransaction(_addNewTransaction);
         });
   }
 
@@ -68,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Sort out'),
         actions: <Widget>[
           IconButton(
-            onPressed: () {},
+            onPressed: () => _startAddNewTransaction(context),
             icon: Icon(Icons.add),
           )
         ],
@@ -86,13 +85,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 elevation: 5,
               ),
             ),
-            UserTransactions(),
+            TransactionList(_userTransaction)
           ],
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => _startAddNewTransaction(context),
         child: Icon(Icons.add),
       ),
     );

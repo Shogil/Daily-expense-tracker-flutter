@@ -1,4 +1,6 @@
 import './widgets/user_transaction.dart';
+import './widgets/new_transaction.dart';
+import './widgets/transaction_list.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,8 +20,16 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   // String titleInput;
   // String amountInput;
-  // final titleController = TextEditingController();
-  // final amountController = TextEditingController();
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
+  void startAddNewTransaction(BuildContext ctx) {
+    showModalBottomSheet(
+        context: ctx,
+        builder: (_) {
+          return NewTransaction();
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

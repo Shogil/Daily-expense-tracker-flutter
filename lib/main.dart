@@ -27,6 +27,12 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Sort out'),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.add),
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(

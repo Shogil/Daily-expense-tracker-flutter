@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Sort Out',
+      theme: ThemeData(primarySwatch: Colors.purple),
       home: MyHomePage(),
     );
   }
@@ -69,7 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
         title: Text('Sort out'),
         actions: <Widget>[
           IconButton(

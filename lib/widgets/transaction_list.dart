@@ -16,9 +16,12 @@ class TransactionList extends StatelessWidget {
                   'No transactions added yet!',
                   style: Theme.of(context).textTheme.headline6,
                 ),
-                Image.asset(
-                  'assets/images/3398100.png',
-                  fit: BoxFit.cover,
+                Container(
+                  height: 200,
+                  child: Image.asset(
+                    'assets/images/3398100.png',
+                    fit: BoxFit.cover,
+                  ),
                 )
               ],
             )

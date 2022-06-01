@@ -41,6 +41,12 @@ class TransactionList extends StatelessWidget {
                       ),
                     ),
                   ),
+                  title: Text(
+                    transactions[index].title,
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
+                  subtitle: Text(
+                      DateFormat.yMMMMd().format(transactions[index].date)),
                 );
               },
               itemCount: transactions.length,

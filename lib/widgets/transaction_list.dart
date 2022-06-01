@@ -32,6 +32,7 @@ class TransactionList extends StatelessWidget {
               // ignore: missing_return
               itemBuilder: (ctx, index) {
                 return Card(
+                  elevation: 5,
                   margin: EdgeInsets.symmetric(
                     vertical: 8,
                     horizontal: 5,

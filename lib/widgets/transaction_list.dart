@@ -31,22 +31,28 @@ class TransactionList extends StatelessWidget {
           : ListView.builder(
               // ignore: missing_return
               itemBuilder: (ctx, index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    radius: 30,
-                    child: Padding(
-                      padding: const EdgeInsets.all(9.0),
-                      child: FittedBox(
-                        child: Text('₹${transactions[index].amount}'),
+                return Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 8,
+                    horizontal: 5,
+                  ),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 30,
+                      child: Padding(
+                        padding: const EdgeInsets.all(9.0),
+                        child: FittedBox(
+                          child: Text('₹${transactions[index].amount}'),
+                        ),
                       ),
                     ),
+                    title: Text(
+                      transactions[index].title,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    subtitle: Text(
+                        DateFormat.yMMMMd().format(transactions[index].date)),
                   ),
-                  title: Text(
-                    transactions[index].title,
-                    style: Theme.of(context).textTheme.headline6,
-                  ),
-                  subtitle: Text(
-                      DateFormat.yMMMMd().format(transactions[index].date)),
                 );
               },
               itemCount: transactions.length,

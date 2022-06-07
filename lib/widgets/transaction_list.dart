@@ -18,10 +18,10 @@ class TransactionList extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline6,
                   ),
                   SizedBox(
-                    height: 10,
+                    height: MediaQuery.of(context).size.height * 0.1,
                   ),
                   Container(
-                    height: 200,
+                    height: MediaQuery.of(context).size.height * 0.6,
                     child: Image.asset(
                       'assets/images/3398100.png',
                       fit: BoxFit.cover,

@@ -113,7 +113,17 @@ class _MyHomePageState extends State<MyHomePage> {
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
     final PreferredSizeWidget appBar = Platform.isIOS
-        ? CupertinoNavigationBar()
+        ? CupertinoNavigationBar(
+            middle: Text(
+              'Splitwise',
+            ),
+            trailing: Row(children: [
+              GestureDetector(
+                child: Icon(CupertinoIcons.add),
+                onTap: () => _startAddNewTransaction(context),
+              )
+            ]),
+          )
         : AppBar(
             title: Text(
               'Splitwise',

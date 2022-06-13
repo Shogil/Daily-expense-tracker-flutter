@@ -1,3 +1,4 @@
+import '../widgets/transaction_item.dart';
 import 'package:flutter/material.dart';
 import '../models/transaction.dart';
 import 'package:intl/intl.dart';
@@ -35,7 +36,7 @@ class TransactionList extends StatelessWidget {
             // ignore: missing_return
             itemBuilder: (ctx, index) {
               return TransactionItem(
-                  transactions: transactions, deleteTx: deleteTx);
+                  transaction: transactions[index], deleteTx: deleteTx);
             },
             itemCount: transactions.length,
           );
